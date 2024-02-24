@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Main from "./pages/Explore/Main";
+import Explore from "./pages/Explore/Explore";
+import Notification from "./pages/Notification/Notification";
 import "tailwindcss/tailwind.css";
 export default function App() {
   return (
@@ -8,7 +9,8 @@ export default function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/explore" element={<Main />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/notification" element={<Notification />} />
       </Routes>
     </Router>
   );

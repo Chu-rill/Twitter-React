@@ -10,7 +10,7 @@ export default function SideBar() {
   });
   return (
     // fixed top-0 left-0 z-10  gave me overflow problem
-    <section className="     min-h-screen overflow-scroll border-r-2 border-gray-200 ">
+    <section className=" h-full overflow-scroll border-r-2 border-gray-200 ">
       <img
         loading="lazy"
         src="images/download (1).webp"
