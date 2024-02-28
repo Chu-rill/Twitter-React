@@ -5,6 +5,10 @@ export default function Tweet(props) {
   function changeHeart() {
     setHeart((prevState) => !prevState);
   }
+  const [retweet, setRetweet] = useState(true);
+  function chnageTweet() {
+    setRetweet((prevState) => !prevState);
+  }
   return (
     <div className="min-h-36 pt-3 bg-inherit flex border-2">
       <img src={`images/${props.img}`} class="w-9 h-9 rounded-[50%]" />
@@ -17,7 +21,14 @@ export default function Tweet(props) {
         <h1 className="text-[12px]">{props.tweet}</h1>
         <div class="flex justify-evenly py-3">
           <i class="fa-regular fa-comment w-5 h-5 cursor-pointer"></i>
-          <i class="fa-solid fa-retweet w-5 h-5 retweet cursor-pointer"></i>
+          <i
+            class={`retweet fa-solid fa-retweet w-5 h-5 retweet cursor-pointer ${
+              retweet === true
+                ? "fa-solid fa-retweet"
+                : "fa-solid fa-retweet text-green-600"
+            }`}
+            onClick={chnageTweet}
+          ></i>
           <i
             class={`heart  w-5 h-5 cursor-pointer ${
               heart === true

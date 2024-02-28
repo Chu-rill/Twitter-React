@@ -4,7 +4,7 @@ import Side from "./Side";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-3cols">
+    <div className="grid grid-cols-3cols dark:bg-black dark:text-white">
       <SideBar />
       <Center />
       <Side />

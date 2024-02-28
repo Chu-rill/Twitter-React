@@ -8,7 +8,9 @@ export default function Msg(props) {
   return (
     <div
       className={`mt-2 state flex cursor-pointer items-center mb-3 p-1 rounded-2xl ${
-        state === true ? "bg-blue-100" : "bg-gray-100"
+        state === true
+          ? "bg-blue-200 dark:bg-blue-600"
+          : "bg-gray-100 dark:bg-gray-600"
       }`}
       onClick={change}
     >

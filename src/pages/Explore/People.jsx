@@ -7,7 +7,7 @@ export default function People(props) {
   }
   return (
     <>
-      <div className="flex">
+      <div className="flex ">
         <img
           src={`images/${props.img}`}
           alt="image"
@@ -19,7 +19,7 @@ export default function People(props) {
           <p className="text-[10px]">{props.sub}</p>
         </div>
         <p
-          className={`follow w-20 ml-3 rounded-3xl h-6 bg-black cursor-pointer hover:bg-blue-400 text-white text-center ${
+          className={`follow w-24  ml-3 rounded-3xl h-8 bg-black cursor-pointer border-2 border-gray-200 hover:bg-blue-400 text-white text-center ${
             follow === true ? "bg-blue-400 hover:bg-black" : ""
           }`}
           onClick={changeText}

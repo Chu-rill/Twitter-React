@@ -9,7 +9,7 @@ export default function Header() {
         </div>
         <p>Following</p>
         {/* <i class="fa-regular fa-gear"></i> */}
-        <i className="fa-solid fa-gear "></i>
+        {/* <i className="fa-solid fa-gear "></i> */}
       </div>
       {/* // --tweet info-- */}
       <div className=" pt-3 pl-2 h-36 flex border-b-2 border-gray-200 ">
@@ -17,7 +17,7 @@ export default function Header() {
         <div className="pl-4 w-96">
           <input
             placeholder="Whats is happening?!"
-            className="input focus:outline-none border-1 "
+            className="input focus:outline-none border-1 bg-inherit"
           />
           <div className="flex mt-14">
             <div>
