@@ -1,25 +1,5 @@
-// import { useState } from "react";
-// import Header from "./Header";
-// import Tweet from "./Tweet";
-// import tweeted from "../../Data/tweet";
-// export default function Center() {
-//   const [tweet, setTweet] = useState([Tweet]);
-
-//   let tweets = tweeted.map((tweet) => {
-//     return (
-//       <>
-//         <tweet {...tweet} />
-//       </>
-//     );
-//   });
-//   return (
-//     <main>
-//       <Header />
-//       {tweets}
-//     </main>
-//   );
-// }
-import { useState } from "react";
+// Center.jsx
+import React, { useState } from "react";
 import Header from "./Header";
 import Tweet from "./Tweet";
 import tweeted from "../../Data/tweet";
@@ -27,6 +7,12 @@ import tweeted from "../../Data/tweet";
 export default function Center() {
   // Initialize state to hold tweet data
   const [tweets, setTweets] = useState(tweeted);
+
+  // Function to add a new tweet
+  const addTweet = (name, img, sub, tweet) => {
+    const newTweet = { name, img, sub, tweet };
+    setTweets((prevTweets) => [...prevTweets, newTweet]);
+  };
 
   // Map through the tweet data array and render Tweet components
   const tweetComponents = tweets.map((tweetData) => <Tweet {...tweetData} />);
@@ -38,3 +24,15 @@ export default function Center() {
     </main>
   );
 }
+
+// Export the addTweet function separately
+export const addTweet = (name, img, sub, tweet, setTweets) => {
+  const newTweet = {
+    name: name,
+    img: img,
+    sub: sub,
+    tweet: tweet,
+  };
+  // Assuming tweets is a state variable managed by useState
+  setTweets((prevTweets) => [...prevTweets, newTweet]);
+};
