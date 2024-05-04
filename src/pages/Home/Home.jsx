@@ -15,4 +15,3 @@ export default function Home() {
     // </div>
   );
 }
-// gap-x-0.5
