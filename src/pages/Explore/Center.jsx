@@ -11,7 +11,7 @@ export default function Center() {
   return (
     <main className="border-r-2 border-gray-200 ">
       <div className=" flex items-center justify-around">
-        <div className="flex items-center rounded-2xl  mb-4 h-12 p-4 focus:border-2 focus:border-black sticky top-0 bg-gray-100 w-[80%] dark:bg-inherit">
+        <div className="flex items-center rounded-2xl  mb-4 h-12 p-4 focus:border-2 focus:border-black sticky top-0  w-[80%] bg-inherit">
           <i className="fa-solid fa-magnifying-glass w-5 h-5"></i>
           <input
             type="text"

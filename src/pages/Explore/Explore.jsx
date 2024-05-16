@@ -4,7 +4,7 @@ import Follow from "./Follow";
 
 export default function Explore() {
   return (
-    <div className="grid grid-cols-3cols dark:bg-black dark:text-white">
+    <div className="grid grid-cols-3cols bg-black text-white">
       <SideBar />
       <Center />
       <Follow />

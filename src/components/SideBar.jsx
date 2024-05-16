@@ -1,6 +1,6 @@
 import side from ".././Data/side";
 import Section from "./Section";
-import ThemeToggleButton from "./ThemeToggleButton";
+
 export default function SideBar() {
   let sect = side.map((data) => {
     return (
@@ -11,14 +11,13 @@ export default function SideBar() {
   });
   return (
     // fixed top-0 left-0 z-10  gave me overflow problem
-    <section className=" h-full border-r-2 border-gray-200 dark:bg-black dark:text-white ">
+    <section className=" h-full border-r-2 border-gray-200 bg-black text-white ">
       <div className="flex justify-around items-center pb-4 mt-4">
         <img
           loading="lazy"
           src="images/download (1).webp"
-          className="h-14 w-14 hover:cursor-pointer hover:bg-gray-200 hover:rounded-full"
+          className="h-14 w-14 hover:cursor-pointer  hover:rounded-full"
         />
-        <ThemeToggleButton />
       </div>
 
       {sect}
